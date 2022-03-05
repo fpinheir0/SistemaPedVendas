@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+  <Transactions>
+    <Transaction>2022/03/02 21:18:09.997,=C:\Users\Felipe Pinheiro\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/03/02 21:21:29.194,C:\Users\Felipe Pinheiro\Documents\SistemaPedVendas\uTelaMain.dfm=C:\Users\Felipe Pinheiro\Documents\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
+    <Transaction>2022/03/02 21:21:29.194,C:\Users\Felipe Pinheiro\Documents\SistemaPedVendas\uTelaMain.pas=C:\Users\Felipe Pinheiro\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/03/02 21:22:22.966,C:\Users\Felipe Pinheiro\Documents\SistemaPedVendas\SistemaVendas.dproj=C:\Users\Felipe Pinheiro\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+    <Transaction>2022/03/02 22:05:55.176,=C:\Users\Felipe Pinheiro\Documents\SistemaPedVendas\Unit1.pas</Transaction>
+    <Transaction>2022/03/02 22:14:53.491,C:\Users\Felipe Pinheiro\Documents\SistemaPedVendas\dmPrincipal.pas=C:\Users\Felipe Pinheiro\Documents\SistemaPedVendas\Unit1.pas</Transaction>
+    <Transaction>2022/03/02 22:14:53.491,C:\Users\Felipe Pinheiro\Documents\SistemaPedVendas\dmPrincipal.dfm=C:\Users\Felipe Pinheiro\Documents\SistemaPedVendas\Unit1.dfm</Transaction>
+    <Transaction>2022/03/02 22:15:06.636,=C:\Users\Felipe Pinheiro\Documents\SistemaPedVendas\Unit1.pas</Transaction>
+    <Transaction>2022/03/02 22:15:48.759,=C:\Users\Felipe Pinheiro\Documents\SistemaPedVendas\Unit1.pas</Transaction>
+    <Transaction>2022/03/02 23:28:57.855,C:\Users\Felipe Pinheiro\Documents\SistemaPedVendas\uCliente.dfm=C:\Users\Felipe Pinheiro\Documents\SistemaPedVendas\Unit1.dfm</Transaction>
+    <Transaction>2022/03/02 23:28:57.855,C:\Users\Felipe Pinheiro\Documents\SistemaPedVendas\uCliente.pas=C:\Users\Felipe Pinheiro\Documents\SistemaPedVendas\Unit1.pas</Transaction>
+  </Transactions>
+</BorlandProject>
