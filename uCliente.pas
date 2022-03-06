@@ -31,6 +31,7 @@ type
     procedure btnCancelarClick(Sender: TObject);
     procedure btnInserirClick(Sender: TObject);
     procedure btnAlterarClick(Sender: TObject);
+    procedure FormKeyPress(Sender: TObject; var Key: Char);
   private
     { Private declarations }
   public
@@ -75,6 +76,17 @@ begin
     TabPesquisa.TabVisible := true;
     TabCadastros.TabVisible := False;
     DBGrid.SetFocus;
+end;
+
+procedure TTelaCliente.FormKeyPress(Sender: TObject; var Key: Char);
+begin
+    if key = #27 then
+    begin
+      if PageControl.ActivePageIndex = 0 then
+      close
+      else
+      btnCancelar.Click;
+    end;
 end;
 
 procedure TTelaCliente.FormShow(Sender: TObject);

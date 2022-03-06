@@ -3,10 +3,9 @@ object TelaCliente: TTelaCliente
   Top = 0
   Align = alCustom
   BorderIcons = []
-  BorderStyle = bsSingle
   Caption = 'CADASTRO DE CLIENTES'
-  ClientHeight = 492
-  ClientWidth = 745
+  ClientHeight = 482
+  ClientWidth = 735
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -15,6 +14,7 @@ object TelaCliente: TTelaCliente
   Font.Style = []
   OldCreateOrder = False
   Position = poDesktopCenter
+  OnKeyPress = FormKeyPress
   OnShow = FormShow
   PixelsPerInch = 96
   TextHeight = 13
@@ -62,11 +62,10 @@ object TelaCliente: TTelaCliente
     Top = 83
     Width = 681
     Height = 401
-    ActivePage = TabPesquisa
+    ActivePage = TabCadastros
     TabOrder = 1
     object TabPesquisa: TTabSheet
       Caption = 'Pesquisa'
-      ExplicitLeft = 0
       object Panel2: TPanel
         Left = 3
         Top = 320
@@ -211,6 +210,7 @@ object TelaCliente: TTelaCliente
             FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFDFDFDFBFBFBFFFFFFFFFFFFFFFFFF
             FFFFFFFFFFFFFFFFFFFBFBFBFDFDFDFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
             FF00}
+          OnClick = btnAlterarClick
         end
         object btnInserir: TSpeedButton
           Left = 20
@@ -281,6 +281,7 @@ object TelaCliente: TTelaCliente
             FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
             FFFFFFFFFFFFFFFFFFFFFEFEFEFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
             FFFFFFFFFF00}
+          OnClick = btnInserirClick
         end
         object navPesquisa: TDBNavigator
           Left = 434
@@ -308,7 +309,6 @@ object TelaCliente: TTelaCliente
     object TabCadastros: TTabSheet
       Caption = 'Cadastros'
       ImageIndex = 1
-      ExplicitLeft = 0
       object Panel1: TPanel
         Left = 5
         Top = 320
@@ -375,6 +375,7 @@ object TelaCliente: TTelaCliente
             DAB2E2DAB7FEFEFEFFFFFFFEFEFEFFFFFF00FFFFFFFFFFFFFFFFFFFFFFFFFFFF
             FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
             FFFFFFFFFFFDFDFDFFFFFFFFFFFFFFFFFFFFFFFFFEFEFEFFFFFFFFFFFF00}
+          OnClick = btnSalvarClick
         end
         object btnCancelar: TSpeedButton
           Left = 200
@@ -445,6 +446,7 @@ object TelaCliente: TTelaCliente
             FFFFFFFFFFFFFFFFFFFFFFFFFDFDFDFBFBFCFEFEFEFFFFFFFFFFFFFFFFFFFFFF
             FFFFFFFFFFFFFFFFFFFFFEFEFEFBFBFCFDFDFDFFFFFFFFFFFFFFFFFFFFFFFFFF
             FFFFFFFFFF00}
+          OnClick = btnCancelarClick
         end
         object nvCadastros: TDBNavigator
           Left = 434
