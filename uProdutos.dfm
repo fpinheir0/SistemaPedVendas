@@ -777,6 +777,7 @@ object TelaProdutos: TTelaProdutos
         Font.Style = []
         ParentFont = False
         TabOrder = 1
+        OnClick = BitBtn1Click
       end
       object edtCodProd: TDBEdit
         Left = 21

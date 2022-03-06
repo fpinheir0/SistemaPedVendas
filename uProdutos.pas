@@ -57,6 +57,7 @@ type
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure DBGridKeyPress(Sender: TObject; var Key: Char);
     procedure btnExcluirClick(Sender: TObject);
+    procedure BitBtn1Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -84,6 +85,14 @@ end;
 procedure TTelaProdutos.btnSairClick(Sender: TObject);
 begin
     close;
+end;
+
+procedure TTelaProdutos.BitBtn1Click(Sender: TObject);
+begin
+    dmDados.TB_PRODUTOSPROD_VALOR_VENDA.Value :=
+    dmDados.TB_PRODUTOSPROD_VALOR_CUSTO.Value *
+    dmDados.TB_PRODUTOSPROD_LUCRO.Value / 100 +
+    dmDados.TB_PRODUTOSPROD_VALOR_CUSTO.Value;
 end;
 
 procedure TTelaProdutos.btnAlterarClick(Sender: TObject);
