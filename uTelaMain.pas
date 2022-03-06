@@ -40,7 +40,7 @@ implementation
 
 {$R *.dfm}
 
-uses uCliente, dmPrincipal;
+uses uCliente, dmPrincipal, uProdutos;
 
 procedure TTelaMain.btnCadClienteClick(Sender: TObject);
 begin
@@ -65,10 +65,10 @@ end;
 procedure TTelaMain.btnCadProdutoClick(Sender: TObject);
 begin
     try
-//      Application.CreateForm(TTelaProdutos, TelaProdutos);
-//      TelaProdutos.showModal;
+      Application.CreateForm(TTelaProdutos, TelaProdutos);
+      TelaProdutos.showModal;
     finally
-//     FreeAndNil(TelaProdutos);
+     FreeAndNil(TelaProdutos);
     end;
 end;
 

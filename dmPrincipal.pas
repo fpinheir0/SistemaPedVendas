@@ -23,6 +23,16 @@ type
     TB_CLIENTESCLI_TELEFONE: TIBStringField;
     TB_CLIENTESCLI_RG: TIBStringField;
     TB_CLIENTESCLI_CPF: TIBStringField;
+    TB_PRODUTOS: TIBTable;
+    dsProdutos: TDataSource;
+    TB_PRODUTOSPROD_ID: TIntegerField;
+    TB_PRODUTOSPROD_COD_BARRAS: TIBStringField;
+    TB_PRODUTOSPROD_PRODUTOS: TIBStringField;
+    TB_PRODUTOSPROD_QTDE_ESTOQUE: TIntegerField;
+    TB_PRODUTOSPROD_VALOR_CUSTO: TFloatField;
+    TB_PRODUTOSPROD_LUCRO: TIntegerField;
+    TB_PRODUTOSPROD_VALOR_VENDA: TFloatField;
+    TB_PRODUTOSPROD_FOTOS: TIBStringField;
   private
     { Private declarations }
   public

@@ -56,6 +56,7 @@ type
     procedure FormCreate(Sender: TObject);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure DBGridKeyPress(Sender: TObject; var Key: Char);
+    procedure btnExcluirClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -99,6 +100,16 @@ begin
     TabPesquisa.TabVisible := true;
     TabCadastros.TabVisible := False;
     DBGrid.SetFocus;
+end;
+
+procedure TTelaCliente.btnExcluirClick(Sender: TObject);
+begin
+   if MessageDlg ('Deseja realmente deletar o registro ? ' , mtWarning, [mbYes,mbNo], 0  ) = IDYES then
+
+   dmDados.TB_CLIENTES.Delete;
+   dmDados.Transaction.CommitRetaining;
+   dmDados.TB_CLIENTES.Last;
+
 end;
 
 procedure TTelaCliente.btnSalvarClick(Sender: TObject);

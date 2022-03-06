@@ -37,6 +37,7 @@ object dmDados: TdmDados
     Left = 40
     Top = 72
     object TB_CLIENTESID_CLIENTE: TIntegerField
+      AutoGenerateValue = arDefault
       FieldName = 'ID_CLIENTE'
     end
     object TB_CLIENTESCLI_NOME: TIBStringField
@@ -83,6 +84,55 @@ object dmDados: TdmDados
   object dsCliente: TDataSource
     DataSet = TB_CLIENTES
     Left = 42
+    Top = 120
+  end
+  object TB_PRODUTOS: TIBTable
+    Database = Projeto_PedVendas
+    Transaction = Transaction
+    BufferChunks = 1000
+    CachedUpdates = False
+    TableName = 'TB_PRODUTOS'
+    UniDirectional = False
+    Left = 120
+    Top = 72
+    object TB_PRODUTOSPROD_ID: TIntegerField
+      Alignment = taLeftJustify
+      FieldName = 'PROD_ID'
+      Required = True
+    end
+    object TB_PRODUTOSPROD_COD_BARRAS: TIBStringField
+      FieldName = 'PROD_COD_BARRAS'
+    end
+    object TB_PRODUTOSPROD_PRODUTOS: TIBStringField
+      FieldName = 'PROD_PRODUTOS'
+      Size = 36
+    end
+    object TB_PRODUTOSPROD_QTDE_ESTOQUE: TIntegerField
+      Alignment = taLeftJustify
+      FieldName = 'PROD_QTDE_ESTOQUE'
+    end
+    object TB_PRODUTOSPROD_VALOR_CUSTO: TFloatField
+      Alignment = taLeftJustify
+      FieldName = 'PROD_VALOR_CUSTO'
+      currency = True
+    end
+    object TB_PRODUTOSPROD_LUCRO: TIntegerField
+      Alignment = taLeftJustify
+      FieldName = 'PROD_LUCRO'
+    end
+    object TB_PRODUTOSPROD_VALOR_VENDA: TFloatField
+      Alignment = taLeftJustify
+      FieldName = 'PROD_VALOR_VENDA'
+      currency = True
+    end
+    object TB_PRODUTOSPROD_FOTOS: TIBStringField
+      FieldName = 'PROD_FOTOS'
+      Size = 70
+    end
+  end
+  object dsProdutos: TDataSource
+    DataSet = TB_PRODUTOS
+    Left = 120
     Top = 120
   end
 end

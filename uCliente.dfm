@@ -51,9 +51,11 @@ object TelaCliente: TTelaCliente
     Top = 52
     Width = 137
     Height = 25
+    BevelInner = bvRaised
+    BevelOuter = bvLowered
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -13
+    Font.Height = -16
     Font.Name = 'Tahoma'
     Font.Style = []
     ParentFont = False
@@ -64,11 +66,10 @@ object TelaCliente: TTelaCliente
     Top = 98
     Width = 681
     Height = 471
-    ActivePage = TabPesquisa
+    ActivePage = TabCadastros
     TabOrder = 1
     object TabPesquisa: TTabSheet
       Caption = 'Pesquisa'
-      ExplicitHeight = 373
       object Panel2: TPanel
         Left = 3
         Top = 392
@@ -150,6 +151,7 @@ object TelaCliente: TTelaCliente
             FFFFFFFFFFFFFFFFFFFFFFFFFDFDFDFBFBFCFEFEFEFFFFFFFFFFFFFFFFFFFFFF
             FFFFFFFFFFFFFFFFFFFFFEFEFEFBFBFCFDFDFDFFFFFFFFFFFFFFFFFFFFFFFFFF
             FFFFFFFFFF00}
+          OnClick = btnExcluirClick
         end
         object btnAlterar: TSpeedButton
           Left = 139
@@ -403,8 +405,12 @@ object TelaCliente: TTelaCliente
         Columns = <
           item
             Expanded = False
+            FieldName = 'ID_CLIENTE'
+            Visible = True
+          end
+          item
+            Expanded = False
             FieldName = 'CLI_NOME'
-            ImeName = 'NOME'
             Visible = True
           end
           item
@@ -457,7 +463,6 @@ object TelaCliente: TTelaCliente
     object TabCadastros: TTabSheet
       Caption = 'Cadastros'
       ImageIndex = 1
-      ExplicitHeight = 417
       object lbNOME: TLabel
         Left = 19
         Top = 24
