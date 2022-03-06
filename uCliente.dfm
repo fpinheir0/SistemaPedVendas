@@ -4,8 +4,8 @@ object TelaCliente: TTelaCliente
   Align = alCustom
   BorderIcons = []
   Caption = 'CADASTRO DE CLIENTES'
-  ClientHeight = 482
-  ClientWidth = 735
+  ClientHeight = 536
+  ClientWidth = 691
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -59,13 +59,14 @@ object TelaCliente: TTelaCliente
   end
   object PageControl: TPageControl
     Left = 8
-    Top = 83
+    Top = 98
     Width = 681
-    Height = 401
+    Height = 438
     ActivePage = TabCadastros
     TabOrder = 1
     object TabPesquisa: TTabSheet
       Caption = 'Pesquisa'
+      ExplicitHeight = 373
       object Panel2: TPanel
         Left = 3
         Top = 320
@@ -297,6 +298,7 @@ object TelaCliente: TTelaCliente
         Top = 3
         Width = 666
         Height = 311
+        DataSource = dsCLIENTES
         Options = [dgTitles, dgIndicator, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgTitleClick, dgTitleHotTrack]
         TabOrder = 1
         TitleFont.Charset = DEFAULT_CHARSET
@@ -304,14 +306,136 @@ object TelaCliente: TTelaCliente
         TitleFont.Height = -11
         TitleFont.Name = 'Tahoma'
         TitleFont.Style = []
+        Columns = <
+          item
+            Expanded = False
+            FieldName = 'NOME'
+            Visible = True
+          end
+          item
+            Expanded = False
+            FieldName = 'CPF'
+            Visible = True
+          end
+          item
+            Expanded = False
+            FieldName = 'RG'
+            Visible = True
+          end
+          item
+            Expanded = False
+            FieldName = 'CEP'
+            Visible = True
+          end
+          item
+            Expanded = False
+            FieldName = 'TELEFONE'
+            Visible = True
+          end
+          item
+            Expanded = False
+            FieldName = 'ENDERECO'
+            Visible = True
+          end
+          item
+            Expanded = False
+            FieldName = 'NUMERO'
+            Visible = True
+          end
+          item
+            Expanded = False
+            FieldName = 'BAIRRO'
+            Visible = True
+          end
+          item
+            Expanded = False
+            FieldName = 'CIDADE'
+            Visible = True
+          end
+          item
+            Expanded = False
+            FieldName = 'ESTADO'
+            Visible = True
+          end>
       end
     end
     object TabCadastros: TTabSheet
       Caption = 'Cadastros'
       ImageIndex = 1
+      ExplicitLeft = 0
+      object lbNOME: TLabel
+        Left = 19
+        Top = 24
+        Width = 29
+        Height = 13
+        Caption = 'NOME'
+      end
+      object lbENDERECO: TLabel
+        Left = 19
+        Top = 190
+        Width = 54
+        Height = 13
+        Caption = 'ENDERECO'
+      end
+      object lbNUMERO: TLabel
+        Left = 552
+        Top = 190
+        Width = 43
+        Height = 13
+        Caption = 'NUMERO'
+      end
+      object lbBAIRRO: TLabel
+        Left = 384
+        Top = 190
+        Width = 39
+        Height = 13
+        Caption = 'BAIRRO'
+      end
+      object lbCEP: TLabel
+        Left = 19
+        Top = 236
+        Width = 19
+        Height = 13
+        Caption = 'CEP'
+      end
+      object lbCIDADE: TLabel
+        Left = 168
+        Top = 236
+        Width = 38
+        Height = 13
+        Caption = 'CIDADE'
+      end
+      object lbESTADO: TLabel
+        Left = 384
+        Top = 236
+        Width = 40
+        Height = 13
+        Caption = 'ESTADO'
+      end
+      object lbTELEFONE: TLabel
+        Left = 19
+        Top = 80
+        Width = 50
+        Height = 13
+        Caption = 'TELEFONE'
+      end
+      object lbRG: TLabel
+        Left = 437
+        Top = 24
+        Width = 14
+        Height = 13
+        Caption = 'RG'
+      end
+      object lbCPF: TLabel
+        Left = 260
+        Top = 24
+        Width = 19
+        Height = 13
+        Caption = 'CPF'
+      end
       object Panel1: TPanel
-        Left = 5
-        Top = 320
+        Left = 3
+        Top = 357
         Width = 665
         Height = 50
         Font.Charset = DEFAULT_CHARSET
@@ -457,6 +581,105 @@ object TelaCliente: TTelaCliente
           TabOrder = 0
         end
       end
+      object edtBAIRRO: TDBEdit
+        Left = 384
+        Top = 209
+        Width = 157
+        Height = 19
+        Ctl3D = False
+        ParentCtl3D = False
+        TabOrder = 1
+      end
+      object edtCEP: TDBEdit
+        Left = 19
+        Top = 255
+        Width = 143
+        Height = 19
+        Ctl3D = False
+        ParentCtl3D = False
+        TabOrder = 2
+      end
+      object edtCIDADE: TDBEdit
+        Left = 168
+        Top = 255
+        Width = 157
+        Height = 19
+        Ctl3D = False
+        ParentCtl3D = False
+        TabOrder = 3
+      end
+      object edtCPF: TDBEdit
+        Left = 260
+        Top = 43
+        Width = 157
+        Height = 19
+        Ctl3D = False
+        ParentCtl3D = False
+        TabOrder = 4
+      end
+      object edtENDERECO: TDBEdit
+        Left = 19
+        Top = 209
+        Width = 346
+        Height = 19
+        Ctl3D = False
+        DataField = 'CLI_NOME'
+        DataSource = dsCLIENTES
+        ParentCtl3D = False
+        TabOrder = 5
+      end
+      object edtESTADO: TDBEdit
+        Left = 384
+        Top = 255
+        Width = 157
+        Height = 19
+        Ctl3D = False
+        ParentCtl3D = False
+        TabOrder = 6
+      end
+      object edtNOME: TDBEdit
+        Left = 19
+        Top = 43
+        Width = 226
+        Height = 19
+        Ctl3D = False
+        DataField = 'CLI_NOME'
+        DataSource = dsCLIENTES
+        ParentCtl3D = False
+        TabOrder = 7
+      end
+      object edtNUMERO: TDBEdit
+        Left = 552
+        Top = 209
+        Width = 65
+        Height = 19
+        Ctl3D = False
+        ParentCtl3D = False
+        TabOrder = 8
+      end
+      object edtRG: TDBEdit
+        Left = 437
+        Top = 43
+        Width = 157
+        Height = 19
+        Ctl3D = False
+        ParentCtl3D = False
+        TabOrder = 9
+      end
+      object edtTELEFONE: TDBEdit
+        Left = 19
+        Top = 99
+        Width = 157
+        Height = 19
+        Ctl3D = False
+        ParentCtl3D = False
+        TabOrder = 10
+      end
     end
+  end
+  object dsCLIENTES: TDataSource
+    DataSet = dmDados.TB_CLIENTES
+    Left = 448
+    Top = 48
   end
 end

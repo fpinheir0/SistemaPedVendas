@@ -13,7 +13,6 @@ uses
 begin
   Application.Initialize;
   Application.MainFormOnTaskbar := True;
-  TStyleManager.TrySetStyle('Luna');
   Application.CreateForm(TTelaMain, TelaMain);
   Application.CreateForm(TdmDados, dmDados);
   Application.CreateForm(TTelaCliente, TelaCliente);

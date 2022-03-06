@@ -5,7 +5,7 @@ interface
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ComCtrls, Vcl.StdCtrls, Vcl.ExtCtrls,
-  Vcl.DBCtrls, Data.DB, Vcl.Grids, Vcl.DBGrids, Vcl.Buttons;
+  Vcl.DBCtrls, Data.DB, Vcl.Grids, Vcl.DBGrids, Vcl.Buttons, Vcl.Mask;
 
 type
   TTelaCliente = class(TForm)
@@ -25,6 +25,27 @@ type
     btnExcluir: TSpeedButton;
     btnAlterar: TSpeedButton;
     btnInserir: TSpeedButton;
+    dsCLIENTES: TDataSource;
+    lbNOME: TLabel;
+    lbENDERECO: TLabel;
+    lbNUMERO: TLabel;
+    lbBAIRRO: TLabel;
+    lbCEP: TLabel;
+    lbCIDADE: TLabel;
+    lbESTADO: TLabel;
+    lbTELEFONE: TLabel;
+    lbRG: TLabel;
+    lbCPF: TLabel;
+    edtNOME: TDBEdit;
+    edtCPF: TDBEdit;
+    edtRG: TDBEdit;
+    edtTELEFONE: TDBEdit;
+    edtENDERECO: TDBEdit;
+    edtBAIRRO: TDBEdit;
+    edtNUMERO: TDBEdit;
+    edtCEP: TDBEdit;
+    edtCIDADE: TDBEdit;
+    edtESTADO: TDBEdit;
     procedure btnSairClick(Sender: TObject);
     procedure FormShow(Sender: TObject);
     procedure btnSalvarClick(Sender: TObject);
@@ -83,7 +104,7 @@ begin
     if key = #27 then
     begin
       if PageControl.ActivePageIndex = 0 then
-      close
+      Close
       else
       btnCancelar.Click;
     end;
