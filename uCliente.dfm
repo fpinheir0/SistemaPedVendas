@@ -14,6 +14,8 @@ object TelaCliente: TTelaCliente
   Font.Style = []
   OldCreateOrder = False
   Position = poDesktopCenter
+  OnClose = FormClose
+  OnCreate = FormCreate
   OnKeyPress = FormKeyPress
   OnShow = FormShow
   PixelsPerInch = 96
@@ -389,7 +391,7 @@ object TelaCliente: TTelaCliente
         Top = 3
         Width = 666
         Height = 391
-        DataSource = dsCLIENTES
+        DataSource = dmDados.dsCliente
         Options = [dgTitles, dgIndicator, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgTitleClick, dgTitleHotTrack]
         TabOrder = 1
         TitleFont.Charset = DEFAULT_CHARSET
@@ -397,55 +399,57 @@ object TelaCliente: TTelaCliente
         TitleFont.Height = -11
         TitleFont.Name = 'Tahoma'
         TitleFont.Style = []
+        OnKeyPress = DBGridKeyPress
         Columns = <
           item
             Expanded = False
-            FieldName = 'NOME'
+            FieldName = 'CLI_NOME'
+            ImeName = 'NOME'
             Visible = True
           end
           item
             Expanded = False
-            FieldName = 'CPF'
+            FieldName = 'CLI_ENDERECO'
             Visible = True
           end
           item
             Expanded = False
-            FieldName = 'RG'
+            FieldName = 'CLI_NUMERO'
             Visible = True
           end
           item
             Expanded = False
-            FieldName = 'CEP'
+            FieldName = 'CLI_BAIRRO'
             Visible = True
           end
           item
             Expanded = False
-            FieldName = 'TELEFONE'
+            FieldName = 'CLI_CEP'
             Visible = True
           end
           item
             Expanded = False
-            FieldName = 'ENDERECO'
+            FieldName = 'CLI_CIDADE'
             Visible = True
           end
           item
             Expanded = False
-            FieldName = 'NUMERO'
+            FieldName = 'CLI_ESTADO'
             Visible = True
           end
           item
             Expanded = False
-            FieldName = 'BAIRRO'
+            FieldName = 'CLI_TELEFONE'
             Visible = True
           end
           item
             Expanded = False
-            FieldName = 'CIDADE'
+            FieldName = 'CLI_RG'
             Visible = True
           end
           item
             Expanded = False
-            FieldName = 'ESTADO'
+            FieldName = 'CLI_CPF'
             Visible = True
           end>
       end
@@ -678,6 +682,8 @@ object TelaCliente: TTelaCliente
         Width = 157
         Height = 19
         Ctl3D = False
+        DataField = 'CLI_BAIRRO'
+        DataSource = dmDados.dsCliente
         ParentCtl3D = False
         TabOrder = 1
       end
@@ -687,6 +693,8 @@ object TelaCliente: TTelaCliente
         Width = 143
         Height = 19
         Ctl3D = False
+        DataField = 'CLI_CEP'
+        DataSource = dmDados.dsCliente
         ParentCtl3D = False
         TabOrder = 2
       end
@@ -696,6 +704,8 @@ object TelaCliente: TTelaCliente
         Width = 157
         Height = 19
         Ctl3D = False
+        DataField = 'CLI_CIDADE'
+        DataSource = dmDados.dsCliente
         ParentCtl3D = False
         TabOrder = 3
       end
@@ -705,6 +715,8 @@ object TelaCliente: TTelaCliente
         Width = 157
         Height = 19
         Ctl3D = False
+        DataField = 'CLI_CPF'
+        DataSource = dmDados.dsCliente
         ParentCtl3D = False
         TabOrder = 4
       end
@@ -714,8 +726,8 @@ object TelaCliente: TTelaCliente
         Width = 346
         Height = 19
         Ctl3D = False
-        DataField = 'CLI_NOME'
-        DataSource = dsCLIENTES
+        DataField = 'CLI_ENDERECO'
+        DataSource = dmDados.dsCliente
         ParentCtl3D = False
         TabOrder = 5
       end
@@ -725,6 +737,8 @@ object TelaCliente: TTelaCliente
         Width = 157
         Height = 19
         Ctl3D = False
+        DataField = 'CLI_ESTADO'
+        DataSource = dmDados.dsCliente
         ParentCtl3D = False
         TabOrder = 6
       end
@@ -735,7 +749,7 @@ object TelaCliente: TTelaCliente
         Height = 19
         Ctl3D = False
         DataField = 'CLI_NOME'
-        DataSource = dsCLIENTES
+        DataSource = dmDados.dsCliente
         ParentCtl3D = False
         TabOrder = 7
       end
@@ -745,6 +759,8 @@ object TelaCliente: TTelaCliente
         Width = 65
         Height = 19
         Ctl3D = False
+        DataField = 'CLI_NUMERO'
+        DataSource = dmDados.dsCliente
         ParentCtl3D = False
         TabOrder = 8
       end
@@ -754,6 +770,8 @@ object TelaCliente: TTelaCliente
         Width = 157
         Height = 19
         Ctl3D = False
+        DataField = 'CLI_RG'
+        DataSource = dmDados.dsCliente
         ParentCtl3D = False
         TabOrder = 9
       end
@@ -763,14 +781,11 @@ object TelaCliente: TTelaCliente
         Width = 157
         Height = 19
         Ctl3D = False
+        DataField = 'CLI_TELEFONE'
+        DataSource = dmDados.dsCliente
         ParentCtl3D = False
         TabOrder = 10
       end
     end
-  end
-  object dsCLIENTES: TDataSource
-    DataSet = dmDados.TB_CLIENTES
-    Left = 448
-    Top = 48
   end
 end

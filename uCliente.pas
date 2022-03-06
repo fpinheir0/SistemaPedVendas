@@ -25,7 +25,6 @@ type
     btnExcluir: TSpeedButton;
     btnAlterar: TSpeedButton;
     btnInserir: TSpeedButton;
-    dsCLIENTES: TDataSource;
     lbNOME: TLabel;
     lbENDERECO: TLabel;
     lbNUMERO: TLabel;
@@ -54,9 +53,13 @@ type
     procedure btnInserirClick(Sender: TObject);
     procedure btnAlterarClick(Sender: TObject);
     procedure FormKeyPress(Sender: TObject; var Key: Char);
+    procedure FormCreate(Sender: TObject);
+    procedure FormClose(Sender: TObject; var Action: TCloseAction);
+    procedure DBGridKeyPress(Sender: TObject; var Key: Char);
   private
     { Private declarations }
   public
+  Texto : String;
     { Public declarations }
   end;
 
@@ -67,11 +70,14 @@ implementation
 
 {$R *.dfm}
 
+uses dmPrincipal;
+
 procedure TTelaCliente.btnInserirClick(Sender: TObject);
 begin
+    dmDados.TB_CLIENTES.Insert;
     TabPesquisa.TabVisible := false;
     TabCadastros.TabVisible := true;
-//    DBGrid.SetFocus;
+    edtNOME.SetFocus;
 end;
 
 procedure TTelaCliente.btnSairClick(Sender: TObject);
@@ -81,6 +87,7 @@ end;
 
 procedure TTelaCliente.btnAlterarClick(Sender: TObject);
 begin
+    dmDados.TB_CLIENTES.Edit;
     TabPesquisa.TabVisible := false;
     TabCadastros.TabVisible := true;
 //    DBGrid.SetFocus;
@@ -88,6 +95,7 @@ end;
 
 procedure TTelaCliente.btnCancelarClick(Sender: TObject);
 begin
+    dmDados.TB_CLIENTES.Cancel;
     TabPesquisa.TabVisible := true;
     TabCadastros.TabVisible := False;
     DBGrid.SetFocus;
@@ -95,9 +103,71 @@ end;
 
 procedure TTelaCliente.btnSalvarClick(Sender: TObject);
 begin
+    if edtNOME.Text = '' then
+    ShowMessage('por favor preencha o campo NOME !')
+    else
+    if edtCPF.Text = '' then
+    ShowMessage('por favor preencha o campo CPF !')
+    else
+      if edtENDERECO.Text = '' then
+    ShowMessage('por favor preencha o campo ENDEREÇO !')
+    else
+      if edtCIDADE.Text = '' then
+    ShowMessage('por favor preencha o campo CIDADE !')
+    else
+      if edtESTADO.Text = '' then
+    ShowMessage('por favor preencha o campo ESTADO !')
+    else
+      if edtCEP.Text = '' then
+    ShowMessage('por favor preencha o campo CEP !')
+    else
+  begin
+    dmDados.TB_CLIENTES.Post;
+    dmDados.Transaction.CommitRetaining;
+    dmDados.TB_CLIENTES.Last;
     TabPesquisa.TabVisible := true;
     TabCadastros.TabVisible := False;
     DBGrid.SetFocus;
+  end;
+
+end;
+
+procedure TTelaCliente.DBGridKeyPress(Sender: TObject; var Key: Char);
+begin
+    if key = #13 then
+    begin
+      if Texto > '' then
+        begin
+          dmDados.TB_CLIENTES.Locate('CLI_CPF' , Texto [loCaseInsensitive, loPartialKey] );
+          Texto := '';
+          pnPesquisa.Caption := Texto;
+        end
+        else
+        btnAlterar.Click;
+    end
+    else
+    if Key = #8 then
+    begin
+      Texto := Copy (Texto,1, Lenght (Texto) -1 ;
+      pnPesquisa.Caption := Texto;
+    end
+    else
+    begin
+      Texto := Texto + Key;
+      pnPesquisa.Caption := Texto;
+    end;
+
+end;
+
+procedure TTelaCliente.FormClose(Sender: TObject; var Action: TCloseAction);
+begin
+    dmDados.TB_CLIENTES.close;
+end;
+
+procedure TTelaCliente.FormCreate(Sender: TObject);
+begin
+    dmDados.TB_CLIENTES.Open;
+    dmDados.TB_CLIENTES.Last;
 end;
 
 procedure TTelaCliente.FormKeyPress(Sender: TObject; var Key: Char);

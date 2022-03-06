@@ -40,7 +40,7 @@ implementation
 
 {$R *.dfm}
 
-uses uCliente;
+uses uCliente, dmPrincipal;
 
 procedure TTelaMain.btnCadClienteClick(Sender: TObject);
 begin
