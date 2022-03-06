@@ -46,6 +46,7 @@ type
     edtCEP: TDBEdit;
     edtCIDADE: TDBEdit;
     edtESTADO: TDBEdit;
+    btnSAIR: TSpeedButton;
     procedure btnSairClick(Sender: TObject);
     procedure FormShow(Sender: TObject);
     procedure btnSalvarClick(Sender: TObject);
