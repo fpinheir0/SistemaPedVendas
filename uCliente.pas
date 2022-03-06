@@ -5,7 +5,7 @@ interface
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ComCtrls, Vcl.StdCtrls, Vcl.ExtCtrls,
-  Vcl.DBCtrls, Data.DB, Vcl.Grids, Vcl.DBGrids, Vcl.Buttons, Vcl.Mask;
+  Vcl.DBCtrls, Vcl.Grids, Vcl.DBGrids, Vcl.Buttons, Vcl.Mask, Data.DB;
 
 type
   TTelaCliente = class(TForm)
@@ -136,27 +136,26 @@ procedure TTelaCliente.DBGridKeyPress(Sender: TObject; var Key: Char);
 begin
     if key = #13 then
     begin
-      if Texto > '' then
-        begin
-          dmDados.TB_CLIENTES.Locate('CLI_CPF' , Texto [loCaseInsensitive, loPartialKey] );
-          Texto := '';
-          pnPesquisa.Caption := Texto;
-        end
-        else
+        if Texto > '' then
+          begin
+            dmDados.TB_CLIENTES.Locate('CLI_CPF' , Texto , [locaseinsensitive,loPartialKey]  );
+            Texto := '';
+            pnPesquisa.Caption := Texto;
+          end
+          else
         btnAlterar.Click;
     end
     else
-    if Key = #8 then
-    begin
-      Texto := Copy (Texto,1, Lenght (Texto) -1 ;
-      pnPesquisa.Caption := Texto;
-    end
+        if Key = #8 then
+          begin
+            Texto := Copy(Texto,1, Length (Texto) -1 );
+            pnPesquisa.Caption := Texto;
+          end
     else
-    begin
-      Texto := Texto + Key;
-      pnPesquisa.Caption := Texto;
+          begin
+            Texto := Texto + Key;
+            pnPesquisa.Caption := Texto;
     end;
-
 end;
 
 procedure TTelaCliente.FormClose(Sender: TObject; var Action: TCloseAction);
