@@ -15,6 +15,8 @@ object TelaVendas: TTelaVendas
   OldCreateOrder = False
   Position = poDesktopCenter
   OnCreate = FormCreate
+  OnKeyDown = FormKeyDown
+  OnShow = FormShow
   PixelsPerInch = 96
   TextHeight = 13
   object Label1: TLabel
@@ -99,19 +101,6 @@ object TelaVendas: TTelaVendas
     ParentFont = False
     TabOrder = 1
   end
-  object edtCodigoBarras: TEdit
-    Left = 32
-    Top = 160
-    Width = 246
-    Height = 41
-    Font.Charset = DEFAULT_CHARSET
-    Font.Color = clWindowText
-    Font.Height = -27
-    Font.Name = 'Tahoma'
-    Font.Style = []
-    ParentFont = False
-    TabOrder = 2
-  end
   object edtQTDE: TEdit
     Left = 600
     Top = 160
@@ -123,7 +112,7 @@ object TelaVendas: TTelaVendas
     Font.Name = 'Tahoma'
     Font.Style = []
     ParentFont = False
-    TabOrder = 3
+    TabOrder = 2
   end
   object DBEdit1: TDBEdit
     Left = 320
@@ -138,7 +127,7 @@ object TelaVendas: TTelaVendas
     Font.Name = 'Tahoma'
     Font.Style = []
     ParentFont = False
-    TabOrder = 4
+    TabOrder = 3
   end
   object DBEdit2: TDBEdit
     Left = 704
@@ -151,6 +140,29 @@ object TelaVendas: TTelaVendas
     Font.Name = 'Tahoma'
     Font.Style = []
     ParentFont = False
+    TabOrder = 4
+  end
+  object Panel1: TPanel
+    Left = 8
+    Top = 216
+    Width = 928
+    Height = 9
+    BevelInner = bvRaised
+    BevelOuter = bvLowered
     TabOrder = 5
+  end
+  object edtCodigoBarras: TEdit
+    Left = 32
+    Top = 160
+    Width = 246
+    Height = 41
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -27
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
+    TabOrder = 6
+    OnKeyPress = edtCodigoBarrasKeyPress
   end
 end

@@ -406,36 +406,43 @@ object TelaProdutos: TTelaProdutos
           item
             Expanded = False
             FieldName = 'PROD_ID'
+            Title.Caption = 'ID PRODUTO'
             Visible = True
           end
           item
             Expanded = False
-            FieldName = 'PROD_COD_BARRAS'
+            FieldName = 'PROD_CODIGO_BARRAS'
+            Title.Caption = 'CODIGO DE BARRA'
             Visible = True
           end
           item
             Expanded = False
-            FieldName = 'PROD_PRODUTOS'
-            Visible = True
-          end
-          item
-            Expanded = False
-            FieldName = 'PROD_QTDE_ESTOQUE'
+            FieldName = 'PROD_PRODUTO'
+            Title.Caption = 'DESCRICAO'
             Visible = True
           end
           item
             Expanded = False
             FieldName = 'PROD_VALOR_CUSTO'
+            Title.Caption = 'VALOR DE CUSTO'
             Visible = True
           end
           item
             Expanded = False
             FieldName = 'PROD_LUCRO'
+            Title.Caption = 'LUCRO'
             Visible = True
           end
           item
             Expanded = False
             FieldName = 'PROD_VALOR_VENDA'
+            Title.Caption = 'VALOR DE VENDA'
+            Visible = True
+          end
+          item
+            Expanded = False
+            FieldName = 'PROD_QTDE_ESTOQUE'
+            Title.Caption = 'QTDE ESTIQUE'
             Visible = True
           end>
       end
