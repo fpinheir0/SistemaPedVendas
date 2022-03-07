@@ -2,17 +2,21 @@
 <BorlandProject>
 	<Transactions>
     <Transaction>2022/03/02 21:18:09.000.997,=C:\Users\Felipe Pinheiro\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
-    <Transaction>2022/03/02 21:21:29.000.194,C:\Users\Felipe Pinheiro\Documents\SistemaPedVendas\uTelaMain.dfm=C:\Users\Felipe Pinheiro\Documents\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
-    <Transaction>2022/03/02 21:21:29.000.194,C:\Users\Felipe Pinheiro\Documents\SistemaPedVendas\uTelaMain.pas=C:\Users\Felipe Pinheiro\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
-    <Transaction>2022/03/02 21:22:22.000.966,C:\Users\Felipe Pinheiro\Documents\SistemaPedVendas\SistemaVendas.dproj=C:\Users\Felipe Pinheiro\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+    <Transaction>2022/03/02 21:21:29.000.194,C:\Users\Felipe Pinheiro\Documents\Embarcadero\Studio\Projects\Unit1.pas=C:\Users\Felipe Pinheiro\Documents\SistemaPedVendas\uTelaMain.pas</Transaction>
+    <Transaction>2022/03/02 21:21:29.000.194,C:\Users\Felipe Pinheiro\Documents\Embarcadero\Studio\Projects\Unit1.dfm=C:\Users\Felipe Pinheiro\Documents\SistemaPedVendas\uTelaMain.dfm</Transaction>
+    <Transaction>2022/03/02 21:22:22.000.966,C:\Users\Felipe Pinheiro\Documents\Embarcadero\Studio\Projects\Project1.dproj=C:\Users\Felipe Pinheiro\Documents\SistemaPedVendas\SistemaVendas.dproj</Transaction>
     <Transaction>2022/03/02 22:05:55.000.176,=C:\Users\Felipe Pinheiro\Documents\SistemaPedVendas\Unit1.pas</Transaction>
-    <Transaction>2022/03/02 22:14:53.000.491,C:\Users\Felipe Pinheiro\Documents\SistemaPedVendas\dmPrincipal.pas=C:\Users\Felipe Pinheiro\Documents\SistemaPedVendas\Unit1.pas</Transaction>
-    <Transaction>2022/03/02 22:14:53.000.491,C:\Users\Felipe Pinheiro\Documents\SistemaPedVendas\dmPrincipal.dfm=C:\Users\Felipe Pinheiro\Documents\SistemaPedVendas\Unit1.dfm</Transaction>
+    <Transaction>2022/03/02 22:14:53.000.491,C:\Users\Felipe Pinheiro\Documents\SistemaPedVendas\Unit1.pas=C:\Users\Felipe Pinheiro\Documents\SistemaPedVendas\dmPrincipal.pas</Transaction>
+    <Transaction>2022/03/02 22:14:53.000.491,C:\Users\Felipe Pinheiro\Documents\SistemaPedVendas\Unit1.dfm=C:\Users\Felipe Pinheiro\Documents\SistemaPedVendas\dmPrincipal.dfm</Transaction>
     <Transaction>2022/03/02 22:15:06.000.636,=C:\Users\Felipe Pinheiro\Documents\SistemaPedVendas\Unit1.pas</Transaction>
     <Transaction>2022/03/02 22:15:48.000.759,=C:\Users\Felipe Pinheiro\Documents\SistemaPedVendas\Unit1.pas</Transaction>
-    <Transaction>2022/03/02 23:28:57.000.855,C:\Users\Felipe Pinheiro\Documents\SistemaPedVendas\uCliente.pas=C:\Users\Felipe Pinheiro\Documents\SistemaPedVendas\Unit1.pas</Transaction>
-    <Transaction>2022/03/02 23:28:57.000.855,C:\Users\Felipe Pinheiro\Documents\SistemaPedVendas\uCliente.dfm=C:\Users\Felipe Pinheiro\Documents\SistemaPedVendas\Unit1.dfm</Transaction>
+    <Transaction>2022/03/02 23:28:57.000.855,C:\Users\Felipe Pinheiro\Documents\SistemaPedVendas\Unit1.pas=C:\Users\Felipe Pinheiro\Documents\SistemaPedVendas\uCliente.pas</Transaction>
+    <Transaction>2022/03/02 23:28:57.000.855,C:\Users\Felipe Pinheiro\Documents\SistemaPedVendas\Unit1.dfm=C:\Users\Felipe Pinheiro\Documents\SistemaPedVendas\uCliente.dfm</Transaction>
     <Transaction>2022/03/06 19:17:04.000.871,=C:\Users\Huron\Desktop\ProjetoEstudo\uProdutos.pas</Transaction>
-    <Transaction>2022/03/06 19:25:55.772,=C:\Users\Huron\Desktop\ProjetoEstudo\uProdutos.pas</Transaction>
+    <Transaction>2022/03/06 19:25:55.000.772,=C:\Users\Huron\Desktop\ProjetoEstudo\uProdutos.pas</Transaction>
+    <Transaction>2022/03/06 21:18:40.000.047,=C:\Users\Huron\Desktop\ProjetoEstudo\U_funcoes.pas</Transaction>
+    <Transaction>2022/03/06 21:52:12.517,=C:\Users\Huron\Desktop\ProjetoEstudo\Unit1.pas</Transaction>
+    <Transaction>2022/03/06 21:54:35.141,C:\Users\Huron\Desktop\ProjetoEstudo\uVendas.pas=C:\Users\Huron\Desktop\ProjetoEstudo\Unit1.pas</Transaction>
+    <Transaction>2022/03/06 21:54:35.141,C:\Users\Huron\Desktop\ProjetoEstudo\uVendas.dfm=C:\Users\Huron\Desktop\ProjetoEstudo\Unit1.dfm</Transaction>
   </Transactions>
 </BorlandProject>

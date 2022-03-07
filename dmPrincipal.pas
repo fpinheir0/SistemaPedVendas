@@ -4,7 +4,7 @@ interface
 
 uses
   System.SysUtils, System.Classes, Data.DB, IBX.IBDatabase, IBX.IBCustomDataSet,
-  IBX.IBTable;
+  IBX.IBTable, IBX.IBQuery;
 
 type
   TdmDados = class(TDataModule)
@@ -26,13 +26,33 @@ type
     TB_PRODUTOS: TIBTable;
     dsProdutos: TDataSource;
     TB_PRODUTOSPROD_ID: TIntegerField;
-    TB_PRODUTOSPROD_COD_BARRAS: TIBStringField;
-    TB_PRODUTOSPROD_PRODUTOS: TIBStringField;
-    TB_PRODUTOSPROD_QTDE_ESTOQUE: TIntegerField;
+    TB_PRODUTOSPROD_CODIGO_BARRAS: TIBStringField;
+    TB_PRODUTOSPROD_PRODUTO: TIBStringField;
     TB_PRODUTOSPROD_VALOR_CUSTO: TFloatField;
     TB_PRODUTOSPROD_LUCRO: TIntegerField;
     TB_PRODUTOSPROD_VALOR_VENDA: TFloatField;
-    TB_PRODUTOSPROD_FOTOS: TIBStringField;
+    TB_PRODUTOSPROD_QTDE_ESTOQUE: TIntegerField;
+    TB_VENDAS: TIBTable;
+    dsVendas: TDataSource;
+    TB_VENDASVEN_ID: TIntegerField;
+    TB_VENDASVEN_NUMERO_NOTA: TIBStringField;
+    TB_VENDASVEN_DATA_VENDA: TDateField;
+    TB_VENDASVEN_HORA_VENDA: TTimeField;
+    TB_VENDASVEN_TOTAL_VENDA: TFloatField;
+    TB_VENDASVEN_PAGAMENTOS: TFloatField;
+    TB_VENDASVEN_TROCO: TFloatField;
+    TB_VENDASCLI_ID: TIntegerField;
+    TB_VENDASFUNC_ID: TIntegerField;
+    TB_VENDASFORMA_ID: TIntegerField;
+    sqlConsultas: TIBQuery;
+    dsConsultas: TDataSource;
+    sqlConsultasPROD_ID: TIntegerField;
+    sqlConsultasPROD_CODIGO_BARRAS: TIBStringField;
+    sqlConsultasPROD_PRODUTO: TIBStringField;
+    sqlConsultasPROD_VALOR_CUSTO: TFloatField;
+    sqlConsultasPROD_LUCRO: TIntegerField;
+    sqlConsultasPROD_VALOR_VENDA: TFloatField;
+    sqlConsultasPROD_QTDE_ESTOQUE: TIntegerField;
   private
     { Private declarations }
   public

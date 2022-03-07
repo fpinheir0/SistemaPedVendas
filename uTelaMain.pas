@@ -27,6 +27,7 @@ type
     procedure btnCadClienteClick(Sender: TObject);
     procedure btnCadFuncionarioClick(Sender: TObject);
     procedure btnCadProdutoClick(Sender: TObject);
+    procedure btnPedidoClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -40,7 +41,7 @@ implementation
 
 {$R *.dfm}
 
-uses uCliente, dmPrincipal, uProdutos;
+uses uCliente, dmPrincipal, uProdutos, uVendas;
 
 procedure TTelaMain.btnCadClienteClick(Sender: TObject);
 begin
@@ -69,6 +70,16 @@ begin
       TelaProdutos.showModal;
     finally
      FreeAndNil(TelaProdutos);
+    end;
+end;
+
+procedure TTelaMain.btnPedidoClick(Sender: TObject);
+begin
+    try
+      Application.CreateForm(TTelaVendas, TelaVendas);
+      TelaVendas.showModal;
+    finally
+     FreeAndNil(TelaVendas);
     end;
 end;
 

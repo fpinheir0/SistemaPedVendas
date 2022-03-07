@@ -66,7 +66,7 @@ object TelaCliente: TTelaCliente
     Top = 98
     Width = 681
     Height = 471
-    ActivePage = TabCadastros
+    ActivePage = TabPesquisa
     TabOrder = 1
     object TabPesquisa: TTabSheet
       Caption = 'Pesquisa'

@@ -1,0 +1,24 @@
+unit uVendas;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs;
+
+type
+  TTelaVendas = class(TForm)
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  TelaVendas: TTelaVendas;
+
+implementation
+
+{$R *.dfm}
+
+end.

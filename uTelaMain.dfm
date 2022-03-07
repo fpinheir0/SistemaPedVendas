@@ -386,6 +386,7 @@ object TelaMain: TTelaMain
         FCFCFCFCFCFCFCFCFCFCFCFCFCFCFCFCFDFDFDF9F9F9CFCFD0D4D4D4FEFEFEFF
         FFFFFEFEFE00}
       ParentFont = False
+      OnClick = btnPedidoClick
     end
     object btnSairSistema: TSpeedButton
       Left = 11

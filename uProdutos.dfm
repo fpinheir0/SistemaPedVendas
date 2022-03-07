@@ -66,7 +66,7 @@ object TelaProdutos: TTelaProdutos
     Top = 98
     Width = 681
     Height = 471
-    ActivePage = TabCadastros
+    ActivePage = TabPesquisa
     TabOrder = 1
     object TabPesquisa: TTabSheet
       Caption = 'Pesquisa'
@@ -802,7 +802,7 @@ object TelaProdutos: TTelaProdutos
         Top = 54
         Width = 61
         Height = 21
-        DataField = 'PROD_VALOR_CUSTO'
+        DataField = 'PROD_QTDE_ESTOQUE'
         DataSource = dmDados.dsProdutos
         TabOrder = 4
       end

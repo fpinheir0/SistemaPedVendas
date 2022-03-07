@@ -1,0 +1,169 @@
+object dmDados: TdmDados
+  OldCreateOrder = False
+  Height = 499
+  Width = 694
+  object Transaction: TIBTransaction
+    Active = True
+    DefaultDatabase = Projeto_PedVendas
+    DefaultAction = TACommitRetaining
+    Params.Strings = (
+      'read_committed'
+      'rec_version'
+      'nowait')
+    Left = 120
+    Top = 8
+  end
+  object Projeto_PedVendas: TIBDatabase
+    Connected = True
+    DatabaseName = 'LocalHost:C:\Users\Huron\Desktop\ProjetoEstudo\DBIND\BANCO.FDB'
+    Params.Strings = (
+      ''
+      'user_name=SYSDBA'
+      'password=Path1234'
+      'lc_ctype=WIN1252')
+    LoginPrompt = False
+    DefaultTransaction = Transaction
+    ServerType = 'IBServer'
+    Left = 40
+    Top = 8
+  end
+  object TB_CLIENTES: TIBTable
+    Database = Projeto_PedVendas
+    Transaction = Transaction
+    BufferChunks = 1000
+    CachedUpdates = False
+    TableName = 'TB_CLIENTES'
+    UniDirectional = False
+    Left = 40
+    Top = 72
+    object TB_CLIENTESID_CLIENTE: TIntegerField
+      AutoGenerateValue = arDefault
+      FieldName = 'ID_CLIENTE'
+    end
+    object TB_CLIENTESCLI_NOME: TIBStringField
+      FieldName = 'CLI_NOME'
+      Size = 35
+    end
+    object TB_CLIENTESCLI_ENDERECO: TIBStringField
+      FieldName = 'CLI_ENDERECO'
+      Size = 35
+    end
+    object TB_CLIENTESCLI_NUMERO: TIBBCDField
+      FieldName = 'CLI_NUMERO'
+      Precision = 18
+      Size = 2
+    end
+    object TB_CLIENTESCLI_BAIRRO: TIBStringField
+      FieldName = 'CLI_BAIRRO'
+      Size = 35
+    end
+    object TB_CLIENTESCLI_CEP: TIBStringField
+      FieldName = 'CLI_CEP'
+      Size = 15
+    end
+    object TB_CLIENTESCLI_CIDADE: TIBStringField
+      FieldName = 'CLI_CIDADE'
+      Size = 35
+    end
+    object TB_CLIENTESCLI_ESTADO: TIBStringField
+      FieldName = 'CLI_ESTADO'
+    end
+    object TB_CLIENTESCLI_TELEFONE: TIBStringField
+      FieldName = 'CLI_TELEFONE'
+      Size = 15
+    end
+    object TB_CLIENTESCLI_RG: TIBStringField
+      FieldName = 'CLI_RG'
+      Size = 15
+    end
+    object TB_CLIENTESCLI_CPF: TIBStringField
+      FieldName = 'CLI_CPF'
+      Size = 15
+    end
+  end
+  object dsCliente: TDataSource
+    DataSet = TB_CLIENTES
+    Left = 42
+    Top = 120
+  end
+  object TB_PRODUTOS: TIBTable
+    Database = Projeto_PedVendas
+    Transaction = Transaction
+    Active = True
+    BufferChunks = 1000
+    CachedUpdates = False
+    FieldDefs = <
+      item
+        Name = 'PROD_ID'
+        Attributes = [faRequired]
+        DataType = ftWideString
+        Size = 15
+      end
+      item
+        Name = 'PROD_CODIGO_BARRAS'
+        DataType = ftWideString
+        Size = 20
+      end
+      item
+        Name = 'PROD_PRODUTO'
+        DataType = ftWideString
+        Size = 36
+      end
+      item
+        Name = 'PROD_VALOR_CUSTO'
+        DataType = ftFloat
+      end
+      item
+        Name = 'PROD_LUCRO'
+        DataType = ftInteger
+      end
+      item
+        Name = 'PROD_VALOR_VENDA'
+        DataType = ftFloat
+      end
+      item
+        Name = 'PROD_QTDE_ESTOQUE'
+        DataType = ftInteger
+      end>
+    IndexDefs = <
+      item
+        Name = 'PK_TB_PRODUTOS'
+        Fields = 'PROD_ID'
+        Options = [ixUnique]
+      end>
+    StoreDefs = True
+    TableName = 'TB_PRODUTOS'
+    UniDirectional = False
+    Left = 120
+    Top = 72
+    object TB_PRODUTOSPROD_ID: TIBStringField
+      FieldName = 'PROD_ID'
+      Required = True
+      Size = 15
+    end
+    object TB_PRODUTOSPROD_CODIGO_BARRAS: TIBStringField
+      FieldName = 'PROD_CODIGO_BARRAS'
+    end
+    object TB_PRODUTOSPROD_PRODUTO: TIBStringField
+      FieldName = 'PROD_PRODUTO'
+      Size = 36
+    end
+    object TB_PRODUTOSPROD_VALOR_CUSTO: TFloatField
+      FieldName = 'PROD_VALOR_CUSTO'
+    end
+    object TB_PRODUTOSPROD_LUCRO: TIntegerField
+      FieldName = 'PROD_LUCRO'
+    end
+    object TB_PRODUTOSPROD_VALOR_VENDA: TFloatField
+      FieldName = 'PROD_VALOR_VENDA'
+    end
+    object TB_PRODUTOSPROD_QTDE_ESTOQUE: TIntegerField
+      FieldName = 'PROD_QTDE_ESTOQUE'
+    end
+  end
+  object dsProdutos: TDataSource
+    DataSet = TB_PRODUTOS
+    Left = 120
+    Top = 128
+  end
+end
