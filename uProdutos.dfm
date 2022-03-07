@@ -66,7 +66,7 @@ object TelaProdutos: TTelaProdutos
     Top = 98
     Width = 681
     Height = 471
-    ActivePage = TabPesquisa
+    ActivePage = TabCadastros
     TabOrder = 1
     object TabPesquisa: TTabSheet
       Caption = 'Pesquisa'
@@ -793,7 +793,7 @@ object TelaProdutos: TTelaProdutos
         Top = 54
         Width = 358
         Height = 21
-        DataField = 'PROD_PRODUTOS'
+        DataField = 'PROD_PRODUTO'
         DataSource = dmDados.dsProdutos
         TabOrder = 3
       end
@@ -802,7 +802,7 @@ object TelaProdutos: TTelaProdutos
         Top = 54
         Width = 61
         Height = 21
-        DataField = 'PROD_QTDE_ESTOQUE'
+        DataField = 'PROD_VALOR_CUSTO'
         DataSource = dmDados.dsProdutos
         TabOrder = 4
       end
@@ -811,7 +811,7 @@ object TelaProdutos: TTelaProdutos
         Top = 150
         Width = 228
         Height = 21
-        DataField = 'PROD_COD_BARRAS'
+        DataField = 'PROD_CODIGO_BARRAS'
         DataSource = dmDados.dsProdutos
         TabOrder = 5
       end
@@ -848,6 +848,7 @@ object TelaProdutos: TTelaProdutos
         Width = 113
         Height = 21
         TabOrder = 9
+        OnChange = edtCodigosChange
       end
       object edtDigitos: TDBEdit
         Left = 148
@@ -855,6 +856,15 @@ object TelaProdutos: TTelaProdutos
         Width = 38
         Height = 21
         TabOrder = 10
+      end
+      object btnGerarCodBarra: TBitBtn
+        Left = 21
+        Top = 313
+        Width = 165
+        Height = 25
+        Caption = 'Gerar Codigo de Barras'
+        TabOrder = 11
+        OnClick = btnGerarCodBarraClick
       end
     end
   end

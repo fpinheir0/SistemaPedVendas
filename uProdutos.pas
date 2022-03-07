@@ -46,6 +46,7 @@ type
     edtValorVenda: TDBEdit;
     edtCodigos: TDBEdit;
     edtDigitos: TDBEdit;
+    btnGerarCodBarra: TBitBtn;
     procedure btnSairClick(Sender: TObject);
     procedure FormShow(Sender: TObject);
     procedure btnSalvarClick(Sender: TObject);
@@ -58,10 +59,14 @@ type
     procedure DBGridKeyPress(Sender: TObject; var Key: Char);
     procedure btnExcluirClick(Sender: TObject);
     procedure BitBtn1Click(Sender: TObject);
+    procedure btnGerarCodBarraClick(Sender: TObject);
+    procedure edtCodigosChange(Sender: TObject);
   private
     { Private declarations }
   public
   Texto : String;
+  TAM : Integer;
+  Codigos,Digitos : String;
     { Public declarations }
   end;
 
@@ -72,14 +77,13 @@ implementation
 
 {$R *.dfm}
 
-uses dmPrincipal;
+uses dmPrincipal, U_funcoes;
 
 procedure TTelaProdutos.btnInserirClick(Sender: TObject);
 begin
     dmDados.TB_PRODUTOS.Insert;
     TabPesquisa.TabVisible := false;
     TabCadastros.TabVisible := true;
-    edtDescricao.SetFocus;
 end;
 
 procedure TTelaProdutos.btnSairClick(Sender: TObject);
@@ -121,6 +125,11 @@ begin
 
 end;
 
+procedure TTelaProdutos.btnGerarCodBarraClick(Sender: TObject);
+begin
+    edtCodigos.Text := FormatDateTime('yymmdd', Date) + FormatDateTime('hhmmss',Time);
+end;
+
 procedure TTelaProdutos.btnSalvarClick(Sender: TObject);
 begin
     if edtDescricao.Text = '' then
@@ -155,7 +164,7 @@ begin
     begin
         if Texto > '' then
           begin
-            dmDados.TB_PRODUTOS.Locate('PROD_COD_BARRAS' , Texto , [locaseinsensitive,loPartialKey]  );
+            dmDados.TB_PRODUTOS.Locate('PROD_ID' , Texto , [locaseinsensitive,loPartialKey]  );
             Texto := '';
             pnPesquisaProd.Caption := Texto;
           end
@@ -172,6 +181,19 @@ begin
           begin
             Texto := Texto + Key;
             pnPesquisaProd.Caption := Texto;
+    end;
+end;
+
+procedure TTelaProdutos.edtCodigosChange(Sender: TObject);
+begin
+    TAM := Length (edtCodigos.Text);
+    if TAM = 12 then
+    begin
+      Codigos := edtCodigos.Text;
+      Digitos := Codigos;
+      Codigos := Codigos + EAN13(Digitos);
+      edtCodBarras.Text := Codigos;
+      edtDigitos.Text := EAN13(Digitos);
     end;
 end;
 
